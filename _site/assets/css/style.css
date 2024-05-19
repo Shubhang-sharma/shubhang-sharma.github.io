@@ -1,0 +1,158 @@
+
+body {
+	font-size: 19px;
+	background-color: #eee;
+	color: #333;
+	max-width: 85rem;
+	text-align: center;
+	font-weight: 400;
+}
+
+.link{
+	text-decoration: none;
+	color: maroon;
+}
+
+
+header {
+	font-family: 'GFS Didot';
+	text-align: center;
+}
+
+header>h1 {
+	font-weight: normal;
+}
+
+.container {
+	width: 56%;
+	margin: 2px auto;
+	text-align: justify;
+}
+
+section {
+	font-family: 'EB Garamond';
+	display: grid;
+	place-items: center;
+	/* min-height: 50vh; */
+}
+
+
+nav>ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+.nav{
+    display: inline;
+	padding: 8px;
+}
+/* 
+nav>ul>li>a:hover, h1.hidden:hover {
+	background-color: #333;
+	color:#eee;
+	padding: 8px;
+	transition: 0.5s;
+} */
+:target {
+    -webkit-animation: target-fade 1s;
+    -moz-animation: target-fade 1s;
+    -o-animation: target-fade 1s;
+    animation: target-fade 1s;
+}
+
+hr{
+	width: 50%;
+}
+
+h2{
+	font-weight: normal;
+	font-family: 'GFS Didoy';
+	text-align: center;
+}
+h3{
+	font-weight: normal;
+	font-family: Garamond, Serif;
+	text-align: center;
+}
+
+.hidden {
+	opacity: 0;
+	/* background-color: #adadac; */
+	transition: all 1s;
+}
+
+a {
+	color: #333;
+	text-decoration:none;
+	color: maroon;
+}
+a:hover {
+	text-decoration:overline;
+	color: maroon;
+}
+
+nav a:hover {
+	text-decoration: none;
+}
+
+/* nav>ul>li>a:hover {
+	background-color: #333;	
+	color:#eee;
+	padding: 3px;
+	transition: 0.5s;
+	text-decoration: none;
+} */
+
+figure img,figure video {
+    display: block;
+    float: unset;
+    margin: auto;
+    padding: 1rem 0
+}
+
+figure figcaption {
+    font-size: 2.07rem;
+    text-align: center
+}
+
+img,video {
+    margin-left: 1.6rem;
+    width: 24%
+}
+
+
+.wide img,.wide video {
+    width: 90%
+}
+
+img.mid {
+    display: block;
+    margin: 0 auto;
+    width: 50%;
+}
+
+img.small {
+	display: block;
+    margin: 0 auto;
+    width: 10%;
+}
+}
+
+footer {
+	align-items: center;
+	text-align: center;
+	/* margin-top: 10px; */
+}
+
+
+
+.show{
+	opacity: 1;
+	}
+
+
+	@media(prefers-reduced-motion){
+		.hidden {
+			transition: none:
+		}
+	}

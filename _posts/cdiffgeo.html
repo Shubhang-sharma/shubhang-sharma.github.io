@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- <link rel="shortcut icon" type="image/png" href="/..\dump/images/favicon.ico" /> -->
+    <link href="..\dump\styles\hstyles.css" rel="stylesheet">
+    <link href="..\dump\styles\pstyles.css" rel="stylesheet">
+
+
+    <script>
+        MathJax = {
+            tex: {
+                inlineMath: [
+                    ['$', '$'],
+                    ['\\(', '\\)']
+                ]
+            }
+        };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js">
+    </script>
+
+    <title>
+        Diff-Geo
+    </title>
+
+</head>
+
+<body>
+
+    <header>
+        <nav>
+            <ul>
+                <li class="nav"><a href="..\index.html" class="link"> Home </a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+
+        <h1>Classical Differential Geometry</h1>
+        <i class="small">Published: April 2024 from NISER, India.</i> <br>
+
+        <p>Okay, so I did classical differential geometry this semester. And it was not so rigorous. It was not that
+            abstract either, basically the instuctor didn't teach it that well. This is a post to put things in
+            perspective. I want to pick out the abstract essentials of the course, so that it doesn't go into waste and I don't
+            regret not learning a reasonably famous and interesting subject.</p>
+
+        <h2>Why did I do the course?</h2>
+        <p>After doing a course on Rings and Modules, I was afraid of algebra. Mostly because it has been clearly proved
+            that with courses in SPS going full fledged I cannot do justice to the beautiful abstraction of math. Since
+            I had courses like General
+            Theory of relativtiy and Quantum Field theory II which would be intensive, I thought I shouldn't challenge
+            myself. I thought I should take a course like Complex Analysis or Differential Equations, something that I
+            know can be less abstract than algebra yet rigorous. Don't get me wrong, I love abstraction, it's just that
+            I can give it only so much time while I do physics courses, especially the 9 hr labs every week. Both
+            complex analysis and Differential Equations clashed with my other physics courses. One with QFT and other
+            with Non-Linear optics.
+
+            I must mention it right here. My algebra is weak. I think I should focus on working on it this sumnmer. From
+            linear algebra to Rings and Modules. I have the theory, I need to solve lots of problems. This summer can
+            really be invested this way. I need to talk to Chitro though, about how he wants me to get prepared for the
+            project. Firstly, I need to gauge if doing such a project and a master's in mathematics even fits. Ahhhh,
+            yes, I need to really fix this.
+        </p>
+
+        The aspects in which I found acceptance are:
+        <ol>
+            <li>It is generally okay to work on the intersection of math and physics for a master's degreee in physics.
+                People do that from other departments, so it should be fine. </li>
+            <li>A math master's degree might involve simply reading extensively too. For example: Soham (B19) read 7
+                chapters of a book, on (if I recall correctly) Riemannian Geometry and read in the first semester about
+                Property T of groups and then read a recent paper on the subject.</li>
+            <li>It is okay to apply for a master's in mathemtical physics/math after my master's at NISER. Infact, it's
+                alright if I do a 2 year master's too.</li>
+        </ol>
+
+        The aspects which are yet to be figured are:
+
+        <ol>
+            <li>My interest in pursuing a math project vs the math prerequisites I have. Is it fine? I can rage, is it
+                fine? I can work on my basics in the sumemr. Is it okay to aim for a mathematical physics dissertation
+                topic?</li>
+        </ol>
+
+        <h2>How did it go?</h2>
+
+        <p>Let me summarise how the course progressed. We first started out with defining the basic tools that we were
+            going to use - <i>vectors, vector fields, integral curves (also maximal), Tangent space.</i> All defined on
+            any open set in $\mathbb{R}^n$. We next worked on <i>n-surfaces</i>, in the framework of level sets. Tangent
+            spaces on such surfaces (relation to the gradient of the function(s) in discussion), and then the important
+            theorem of Lagrange Multiplier's to extremize a given function with constraint written in the form of
+            level set(s). This theorem has got a good intution which Abha and I managed to figure out during a study
+            session. A simple application of this goes into proving a symmetric matrix is diagonalizable; just define
+            appropriate function (which looks like a mixed polynnomial, and can be written in inner product form) and
+            restrict it to a level set. Smoothness of functions on surface, Tangent vector fields surfaces and how there
+            exist (maximal) integral curves on them, orientation of surface, the two-oritentation proof for a connected
+            surface; the highly intuitive Gauss map (basically capturing all the unit normals <i>onto</i> a sphere; yes
+            turns out Gauss map is onto for a compact surface!).
+
+        <p> Remember we only defined an <i>n-surface</i> in the framework of a level set. We now extend the concept of
+            n-surfaces
+            to be either <i>parametric or locally parametric</i> by defining what we mean by a <i>parametrization</i>
+            (and also reparametrization).
+            We
+            basically look for a function that takes us from a low dimenstion euclidean space (locally atleast) to a
+            higher one, where our surface recides. Yea, the concept of charts and atlasses sneek in, but we didn't go
+            there, although we did use the terminology of chart, as a three tuple ($D\subset\mathbb{R}^2,\phi:D\mapsto
+            S,
+            S\subset\mathbb{R}^3 $)An n-surface usually means a level set, unless the (local)
+            parametrization is specified.</p>
+
+        <p>We come back to studying the unit normal, basically the gauss map. We define the <i>orientability</i> of a
+            locally parametric n-surface. It is dependent on sign of the determinant of the derivate of the transitions
+            functions. Recall that a compact n-surface had two orientations. Guess what, the non-orientability of
+            M\"obius strip was proved! We dabbled a
+            bit on how a compact, orientable and locally parametrizable n-surface could be seen as an n-surface, by
+            questioning the existence of the so called <i>tubular neighborhood</i> (through Inverse function theorem),
+            where there is a unique normal line
+            passing through each point. I'm not clear on how this leads to an n-surface. This is good direction to
+            probe, there are as the instructor briefly alluded about a few conditions to consider and check around.
+        </p>
+        <p>Now for the legendary study on the unit normals/gauss map. We define <i>Weingarten map or the Shape
+                operator</i> which tell you how much the normal changes along the tangent. It maps one tangent vector to
+            another by varying the normal at the initial point, of which the tangenet
+            vector belongs to. This turns out to be a very strong concept, that gives out information on the curvature
+            of surfaces. It's a self adjoint operator, meaning it has real eigen values. Oh yeah, the map is essentially
+            a <i>derivation</i> of normal, so it's a linaer map. We then paused the weingarten map (or the $L_p$ map)
+            study and moved on to studying curves.
+        </p>
+        <p>$C^k$ curves, reparametrization, regular curves, unit speed ones, their interaction, and then the curvature
+            (signed) of the curves; <i>yeah, on how much the curve curves..</i>. Relating this to variation of the angle
+            between any vector and the tangent. Then about the space curves, one could define tangent, normal and also
+            bi-normal, and have a formula that governs their variation - the <i>Serret-Frenet formula</i>. Then came the
+            drumrolls, <i>geodesics.</i> Simple abstraction - the double derivative of the curve at every point has to
+            be normal to the tangent space at that point, <i>geodesics got no acceleration along the direction they
+                are going to move (tanget space)</i>- translates to speed (norm of the tangent vector) being constant.
+            We then proved the existence of geodesics.
+
+
+        <p> <b>That's the end of half the semester :).</b></p>
+        </p>
+
+
+        <p>
+            Back to Weingarten map, probably the most important concept in the entire course. We discuss it in the
+            context of locally paramaetric n-surfaces, and define three kind of curvature <i>Principal, Mean and
+                Gaussian</i> in terms of the eigenvalues. We tediously computed mean and gaussian curvature for a graph
+            of a function and a surface of revolution. A brief mention of existence of minimal (vanishing mean
+            curvtature everywhere) later we enter the stage where I found a great fucking book called <i>Gauge fields,
+                Knots and Gravity</i> and I simmply couldn't focus on the classes, since I was
+            raging at Mathematical Physics and thinking about my future moves - QFT II/GR reading projects, thesis,
+            master's after master's, PhD and all that, couldn't resist myself not dindulgin myself in it, too damn
+            interesting, and was basically raging yeah.
+
+            But I didn't miss the game though, I noted everything that's going in my mind; just the big picture I mean.
+            So it was easy for me to look at Abha's clear notes and understand the stuff. So, moving on, we defined a
+            <i>normal section</i>. It's a plane that passes through a point on surface, it's unit tangent, and it's unit
+            normal. It's interesection with the surface turned out to be a regular curve! I don't have the big picture
+            for normal sections. No idea why we talked about them. ***
+
+
+
+
+
+
+        </p>
+
+        </p>
+
+
+
+    </main>
+</body>
+
+</html>

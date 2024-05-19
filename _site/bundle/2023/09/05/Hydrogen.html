@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- <link rel="shortcut icon" type="image/png" href="/..\dump/images/favicon.ico" /> -->
+    <link rel="stylesheet" href=/%20..%5Cassets%5Ccss%5Chstyles.css>
+    <link rel="stylesheet" href=/%20..%5Cassets%5Ccss%5Cpstyles.css>
+
+
+    <script>
+        MathJax = {
+
+            loader: {
+                load: ['[tex]/mathtools']
+            },
+            tex: {
+                packages: { '[+]': 'mathtools' },
+                inlineMath: [
+                    ['$', '$'],
+                    ['\\(', '\\)']
+                ]
+
+
+            }
+        };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js">
+    </script>
+    <title> The story of Hydrogen atom | Bundle</title>
+    
+
+</head>
+
+<body>
+
+    
+    <header>
+        <nav>
+            <ul>
+                <li class="nav"><a href="..\" class="link"> Home </a></li>
+            </ul>
+        </nav>
+    <h1 class = "pageTitle"> The story of Hydrogen atom</h1>
+    <hr>
+    </header>
+    
+    <main>
+
+    <figure class="wide center">
+      <img src="..\..\..\..\assets\images\Hatom\Hatom.jpg" alt="" />
+      <figcaption class="small"><i><a class="no-line" href="https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.110.213001">Hydrogen Atoms under
+            Magnification: Direct Observation of the Nodal Structure of Stark States.</a></i></figcaption>
+    </figure>
+
+    <h2>Retarded Hydrogen Atom</h2>
+    The non-relativistic Hydrogen atom has the following spectrum,
+
+
+    <figure class="wide">
+      <img src="..\..\..\..\assets\images\Hatom\Retardedspectrum.jpg" />
+      <figcaption class="small center"></figcaption>
+    </figure>
+
+    <p>High resolution spectrometers observed a fine splitting of the above degeneracy. What follows below is a more
+      detailed analysis of the Hydrogen atom Hamiltonian to explain the fine structure.</p>
+
+
+    <h2>Baby Dirac equation</h2>
+
+
+    <p>How do we reconcile the interaction of electron in a hydrogen atom with the magnetic field? Here's how people
+      have tried formulating. </p>
+
+    <p>For a loop carrying a current I, we write the magnetic moment $\bar{\mu} = \frac{I \bar{A}}{C}$. So, an electron
+      with orbital
+      angular momentum $\bar{L}$ has $\bar{\mu} = \frac{q}{2mC}\bar{L}$.</p>
+
+    <p>Being reasonably intuitive, people have tried writing $\bar{\mu} = g \frac{e}{2m_eC} \bar{S}$ for the magnetic
+      moment due to the
+      quantum spin of electron. Clearly we were ambitious about the nature of magnetic moment in quantum regime in
+      writing it almost
+      same as classical one. But we have also parametrized all our ignorance in the factor $g$. Experiments show that $g
+      \approx 2$, a simple <i>2</i> for the electron! So
+      quantum spin is not that strange from classical after all! But nevertheless this is the first glance at why the
+      quantum spin is not about
+      electron spinning around it's axis, although telling us its probably okay to think on those lines (with a
+      whispering $g$ accompanying every time). </p>
+
+    <p>So, Pauli in 1927 went on to formulate this whole business. He noticed something funny, that
+
+      \begin{align}
+      (\bar{\sigma} .\bar{a}) (\bar{\sigma} .\bar{b}) = (\bar{a}.\bar{b} +i\bar{\sigma}.
+      (\bar{a}\times\bar{b})) \tag{1}
+      \end{align}
+
+      gives $(\bar{\sigma} .\bar{p})^2 = \bar{p}^2$.
+      With prior learning from Stern-Gerlach eperiment regarding the two spin states of electron, he started out with
+      writing the Hamiltonian eigenstate as a column vector, a 2-spinor; $\psi = \begin{bmatrix} \chi \\
+      \eta \end{bmatrix}$.</p>
+
+
+    <p>Rewriting the hamiltonian this way replacing $\bar{p}^2$ with $(\bar{\sigma}.\bar{p})^2$ and in present of the
+      E.M fields, $\bar{p} \rightarrow \bar{\pi} = \bar{p} - \frac{q}{C}\bar{A}$,
+      we have
+
+      \begin{align}
+      H_{Pauli} &amp;= {\frac {1}{2m}}\left[{\bar {\sigma }}\cdot (\bar {p} -q\bar {A} )\right]^{2}+q\phi \tag{2} \\
+      &amp;= \frac{1}{2m}\left(\bar {p} -q\bar {A} \right)^{2}-2\times\frac{q\hbar {\bar {\sigma }}\cdot \bar {B}}{2m}+q\phi
+      \\
+      &amp;= {\frac {1}{2m}}\left[|\bar {p} |^{2}-q(\bar {L} +2\bar {S} )\cdot \bar {B}
+      \right]+q\phi \tag{3}
+
+      \end{align}
+
+      Where we have assumed magnetic field is weak in writing the third line. The g-factor is naturally
+      seen to be 2 in the Pauli equation as the coefficient of $\bar{S}$.
+    </p>
+
+    <h2>The Dirac equation</h2>
+    The Electromagnetic interaction is reconciled due to Pauli, and even the Lande's g-factor for the electron is
+    explained! In 1928 Dirac figured a way to blend the relativistic artifacts correctly with the Pauli's equation.
+    This is a nice point to discuss the issues in relativistic formulation that physicists faced which ultimately lead
+    to QFT. I divert all such subtleties to a blog titled <i><a href="">The beginnings of QFT</a></i>, but for now I
+    will assume Dirac
+    equation is a nice way to reconcile the relativistic mechanics in the quantum world.
+    To escape the infinite orders of terms when one expands the relativistic energy, Dirac wrote $p^2C^2 + m^2C^4$ as a
+    square of some linear function of $p$. Clearly there are no mixing terms, so Dirac went crazy. He wrote,
+    $$p^2C^2 + m^2C^4 = (C\bar{\alpha}.\bar{p} + \beta mC^2)$$
+    Doing the obvious sanity checks leaves us with $(\alpha_i)^2 = \beta^2 = 1; \alpha_i\beta + \beta\alpha_i = 0 =
+    \alpha_i\alpha_j + \alpha_j\alpha_i$. With nice <a href=""><i>little discussion</i></a> on when will such properties
+    be satisfied,
+    one ends up with the following representation,
+    \begin{align}
+    \bar{\alpha} = \begin{bmatrix} 0 &amp; \bar{\sigma} \\
+    \bar{\sigma} &amp; 0
+    \end{bmatrix}; \beta = \begin{bmatrix} \mathbb{1} &amp; 0 \\ 0 &amp; -\mathbb{1}\end{bmatrix}
+    \end{align}
+
+    <figure class="wide">
+      <img src="..\..\..\..\assets\images\Hatom\dirac.jpg" />
+      <figcaption class="small center">Dirac Equation before and after coupling with electromagnetic fields.
+      </figcaption>
+    </figure>
+
+
+    <h2>Foldy–Wouthuysen transformation</h2>
+    I understand only the following as of now:
+    <p>Writing $\psi = \Omega^{-1}\chi$ with $\Omega = 1 + \frac{(\bar{\sigma}.\bar{\pi})^2}{8m^2C^2}$ gives the right
+      Fine structure Hamiltonian.</p>
+
+
+
+    <h2>The Fine structure of Hydrogen atom</h2>
+    Cut to post Barton Zwiebach lecture binge. Here's the Hydrogen Atom Fine structure summarized.
+
+    <figure class="wide">
+      <img src="..\..\..\..\assets\images\Hatom\fine.jpg" />
+      <figcaption class="small center"></figcaption>
+    </figure>
+
+    <figure class="wide">
+      <img src="..\..\..\..\assets\images\Hatom\Finespectrum.jpg" />
+      <figcaption class="small center">The Fine Structure of Spectrum of the Hydrogen Atom. </figcaption>
+    </figure>
+
+
+    <hr />
+
+    My complete handwritten notes of the lectures by Barton Zwebach, MIT OCW, 8.06 on the Fine structure of Hydrogen
+    atom can be found <a href="..\..\..\..\assets\notes\Hatom\FineStructure.pdf">here</a>. A not-so-complete notes on
+    Foldy–Wouthuysen transformation oof lectures from P40X, NISER can be found <a href="..\..\..\..\assets\notes\Hatom\Foldy.pdf">here</a>.
+
+    <h2>Zeeman Structure</h2>
+
+    <p>In explaining the Fine strcture of Hydrogen atom, we used the Dirac equation and added an electromagnetic
+      interaction term, eventually assuming only the internal coloumbic electric field to be present i.e. no other
+      external electric or magnetic field. In this section we will introduce an external magnetic field.</p>
+
+      <p>The strategy is as follows - Start with the good old not so fine Hamiltonian and  
+      </p>
+
+  </main>
+
+<footer>
+    Credits:
+    <ol>
+      <li>Barton Zwebach, MIT OCW, 8.06</li>
+      <li>Ayush Singh's Github for fonts and styling</li>
+      <li>P40x, NISER</li>
+      <li>Topics in Aatomic Physics, Burkhardt and Leventhal</li>
+    </ol>
+    
+  </footer>
+
+</body>
+
+</html>

@@ -1,0 +1,43 @@
+.logo>img{
+    width: 30%
+}
+
+nav>ul {
+    list-style-type: none;
+    margin: 0;
+}
+
+.nav{
+    align-items: center;
+    display: inline;
+	padding: 8px;
+}
+
+
+nav>ul>li>a::before {
+    content: "台" 
+}
+
+.link {
+    color: #eee;
+}
+
+
+/* .postTag {
+    background-color: #abedc3;
+} */
+
+
+.mypost {
+    padding: 10px;
+}
+
+hr.pad {
+    margin: 5px;
+    stroke-width: 1px;
+}
+
+.postDate,.postTag{
+    font-size: 16px;
+    font-weight: 500;
+}

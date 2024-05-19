@@ -1,0 +1,849 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- <link rel="shortcut icon" type="image/png" href="/..\dump/images/favicon.ico" /> -->
+    <link rel="stylesheet" href=/%20..%5Cassets%5Ccss%5Chstyles.css>
+    <link rel="stylesheet" href=/%20..%5Cassets%5Ccss%5Cpstyles.css>
+
+
+    <script>
+        MathJax = {
+
+            loader: {
+                load: ['[tex]/mathtools']
+            },
+            tex: {
+                packages: { '[+]': 'mathtools' },
+                inlineMath: [
+                    ['$', '$'],
+                    ['\\(', '\\)']
+                ]
+
+
+            }
+        };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js">
+    </script>
+    <title> Classical Mechanics ala Manifolds | Bundle</title>
+    
+
+</head>
+
+<body>
+
+    
+    <header>
+        <nav>
+            <ul>
+                <li class="nav"><a href="..\" class="link"> Home </a></li>
+            </ul>
+        </nav>
+    <h1 class = "pageTitle"> Classical Mechanics ala Manifolds</h1>
+    <hr>
+    </header>
+    
+    <blockquote><i>In this drama of mathematics and physics, which fertilize each other in the dark, but which
+        prefer to deny and misconstrue each other face to face—I cannot, however, resist playing the role of a
+        messenger, albeit, as I have abundantly learned, often an unwelcome one.</i>
+
+    ~ Hermann Weyl</blockquote>
+
+<p>In summer of 2023, I learned some modern Differential geometry and started reading the mathematics of
+Classical Mechaniccs. While I was in the process of properply recalling things and aiming at coherence about the
+subject
+to myself, I was ignited by Tanush’s talk on Mathematics of General Relativity, here at NISER and
+decided to write the things that I managed to put together in summer, i.e the mathematics of Classical Mechanics
+in the form of a website, since it gives me
+a better control of aesthetics and also helps in <i>communication</i>, all while recalling things for myself!
+So, this
+page is a result of me indulging in getting creative while seeking coherence. The page needs a little
+refinement at various places, but the main purpose of it is served.</p>
+
+<h2>Introduction</h2>
+
+<p class="indent">
+    Classical mechanics describes systems with finitely many interacting particles.(A particle is a material
+    body whose dimensions may be neglected in describing its motion.) A system is closed if its particles do not
+    interact with the outside material bodies. The position of a system in space is specified by the position of
+    its particles and defines a point in a smooth, finite-dimensional manifold M, the <i>configuration space</i>
+    of a system. Coordinates on $M$ are called <i>generalized coordinates</i> of a system, and the dimension $n$
+    = dim $M$ is called the number of <i>degrees of freedom</i>. Systems with infinitely many degrees of freedom
+    are described by Classical Field Theory (which is for another summer to probe into).
+</p>
+
+<p>The above is quoted directly from Chapter-1 of Takhtajan's <i>Quantum Mechanics for Mathematicians.</i></p>
+
+<p>The <i>state</i> of a system at any instant of time is described by a point $q \in M$ and by a tangent
+    vector $v \in T_qM$ at this point.</p>
+
+<p class="indent">The motion of the system in space is captured by the trajectory $\gamma(t):\mathbb{R}\mapsto
+    M$. The position of the particles in the system is denoted by $q(t) \in M$ given by $\gamma(t)$. The nature
+    makes
+    $\ddot{q}(t)$ depend on the state of the system in a certain way, and it's the aim of classical mechanics to
+    discuss such dependence.
+    This is casted in terms of Principle of least action, leading to the <i>Euler-Lagrange equations</i>.</p>
+
+<p class="indent">A Lagrangian system (M,L) on a configuration space M is defined by a smooth function
+    $L:TM\times\mathbb{R}\mapsto \mathbb{R}$ called the Lagrangian function. TM is the tangent bundle to the
+    manifold $M$ and $\mathbb{R}$ in the domain corresponds to the time.</p>
+<h2>Manifolds</h2>
+<p class="def"><b class="defb"><i>Definition:</i></b> A set $M$ is a <i>d-dimensional topological manifold</i>
+    $(M,\mathcal{O})$ if
+    it is <a href="https://en.wikipedia.org/wiki/Paracompact_space"><i>paracompact</i></a>, <a href="https://en.wikipedia.org/wiki/Hausdorff_space"><i>Hausdorff</i></a>, and a topological space such
+    that for every point $p \in M, \exists$ a
+    neighbourhood $U_p$ and a homeomorphism $x:U_p \mapsto x(U_p)
+    \subseteq \mathbb{R}^d.$
+</p>
+
+<p>If M is a set, a <i>topology</i> on M is a set $\mathcal{O} \subseteq \mathcal{P(M)}$, i.e a collection of
+    subsets of $M$ such that:
+
+<ol>
+    <li>$\varnothing \in \mathcal{O}$ and $M \in \mathcal{O}$.</li>
+    <li>$U_\alpha \subseteq \mathcal{O},$ any subcollection of $\mathcal{O} \implies \bigcup_\alpha U_\alpha \in
+        \mathcal{O}.$</li>
+    <li>$U_\alpha \subseteq \mathcal{O},$ a finite subcollection of $\mathcal{O} \implies \bigcap_\alpha
+        U_\alpha \in \mathcal{O}.$</li>
+</ol>
+</p>
+<p>A topological space M, is an ordered pair $(M,\mathcal{O})$, consisting of the set and the topology. We omit
+    $\mathcal{O}$, and simply denote the topological space by its set $M$ from here on. Any set $U \subseteq M$
+    is called an <i>open set</i> of M, if $U \in \mathcal{O}.$</p>
+
+<p>By a neighbourhood $U_p$ of $p$, we mean $U_p \ni p$ and $U_p \in \mathcal{O}.$</p>
+<p>We do not delve into the Hausdorff (a kind of seperation axiom) and Paracompact properties of the manifolds
+    for now, and
+    the basic game can still be understood without probing them.</p>
+
+<div class="figure">
+    <img src="..\..\..\..\assets\images\CaM\charts.jpg" alt="" class="mid" />
+
+</div>
+<!-- Charts, Atlasses, Tr++ansition functions, Smoothness. -->
+<h3><i>Charts, Atlasses and Transition functions:</i></h3>
+<p>Consider a <i>d-dimensional manifold $\left(M,\mathcal{O}\right)$</i>.</p>
+
+<ul>
+
+    <li>
+        <p class="def"><b class="defb"><i>Definition:</i></b> A pair $(U,x)$ where $U \in \mathcal{O}$ and $x: U
+            \rightarrow x(U) \subseteq
+            \mathbb{R}^d$ is a homeomorphism, is said to be a $chart$ of the manifold.</p>
+        <p>The component functions of the map $x$, i.e
+            \begin{align}
+            x^i:&amp;U\rightarrow\mathbb{R}\\
+            &amp;p \mapsto proj_i(x(p)) ; 1 \le i \le d.
+            \end{align}
+            give the <i>coordinates</i> of the point $p$ on the manifold - $\left(x^1(p),...,x^d(p)\right)$ with
+            respect to the chart $(U,x$.)
+        </p>
+    </li>
+
+    <li>
+        <p class="def"><b class="defb"><i>Definition:</i></b>A collection of charts $\mathcal{A} :=
+            \{(U_\alpha,x_\alpha)\mid \alpha \in A\}$ is called an $atlas$ if, $\bigcup_{\alpha\in A} U_\alpha =
+            M$.</p>
+        <ul>
+            <li>
+                Two charts $(U,x)$ and $(V,y)$ are said to be $C^0-compatible$ if either $U\cap V = \varnothing$
+                or the map:
+
+                \begin{align}
+                y\circ x^{-1}:x(U\cap V) \rightarrow y(U\cap V)
+                \end{align}
+                is continous or i.e $C^0$.
+
+                Such maps are called <i>transition functions</i>, in the sense that we move betweent two chart
+                representations.
+            </li>
+            <li>
+                <p>Since, $x$ and $y$ are homeomorphisms, we see that any two charts on the manifold are
+                    $C^0-compatible$.</p>
+            </li>
+
+            <li>
+                A $C^0-atlas \ \mathcal{A}$ is said to be a maximal atlas if for every $(U,x) \in \mathcal{A}$,
+                we have all $(V,y) \in \mathcal{A}$, where $(V,y)$ and $(U,x)$ are $C^0-compatible$.
+            </li>
+
+            <li>
+                A $C^k-atlas $ is one in which any two charts are $C^k-compatible$ i.e the transitions maps are
+                $C^k$ functions.
+            </li>
+        </ul>
+    </li>
+
+    <li>
+        <p class="def"><b class="defb"><i>Definition:</i></b> A $C^k-manifold$ is a 3-tuple
+            $\left(M,\mathcal{O},\mathcal{A}\right)$, where $\mathcal{A}$ is a maximal $C^k-atlas$.</p>
+
+        <ul>
+            <li>
+                A $C^\infty-manifold$ is called a <i>smooth manifold.</i>
+            </li>
+
+            <li>If $(M,\mathcal{O}_M,\mathcal{A}_M)$ and $(N,\mathcal{O}_N,\mathcal{A}_N)$ are two
+                $C^k$-<i>manifolds</i>, then $F:M\rightarrow N$ is $C^k$ at $p \in M$, if the map
+                \begin{align}
+                \widehat{F} = \psi\circ F \circ \phi^{-1}: \phi(U\cap F^{-1}(V)) \rightarrow \psi(V)
+                \end{align}
+
+                is $C^k$; where, $(U,\phi) \ni p$ and $\in \mathcal{A}_M$; $(V,\psi) \ni F(p)$ and $\in
+                \mathcal{A}_N$. $\widehat{F}$ is an <i>inter-manifold transition function</i> if you will.
+            </li>
+        </ul>
+    </li>
+</ul>
+<div class="figure">
+    <img src="..\..\..\..\assets\images\CaM\transition2.jpg" alt="" class="mid" />
+</div>
+
+<h2>Tangent Spaces</h2>
+
+<h3>Motivation</h3>
+
+<p>We develop the abstraction for the tangent space by looking at a specific function of a vector in a Euclidean
+    space. After a formal definition, we will prove a geometric result that forms the basis of our discussion on
+    Classical Mechanics.</p>
+
+<p>In a Euclidean space $\mathbb{R}^n$, one can define a <i>geometric tangent space</i> at a point $p \in
+\mathbb{R}^n$ as</p>
+
+<p>\begin{align}
+    \mathbb{R}^n_p := {(a,v)\mid v \in \mathbb{R}^n}
+\end{align}</p>
+
+<p>Look at a specific function of each element of $\mathbb{R}^n_p$(call it a <i>geometric tangent vector</i>, say
+$v_p \in
+\mathbb{R}^n_p$):</p>
+
+<p>
+    Consider $f: \mathbb{R}^n \rightarrow \mathbb{R}$, we have the following linear map,
+
+    \begin{align}
+    D_v\mid_p:C^\infty(\mathbb{R}^n) \rightarrow &amp;\mathbb{R} \\
+    f \mapsto &amp;D_vf(p) \\
+    &amp;=\frac{d}{dt} f(p + tv) \\
+    &amp;=v^i \frac{\partial f}{\partial x^i}
+    \end{align}
+</p>
+
+<p>We thus recognize that a geometric tangent vector defines a linear map, more specifially a derivation of a
+$C^\infty(\mathbb{R}^n)$ function.</p>
+
+<p class="def"><b class="defb"><i>Definition:</i></b>
+    If $p \in \mathbb{R}^n$ a map $w:C^\infty(\mathbb{R}^n) \rightarrow \mathbb{R}$ is called a <i>derivation
+        at</i> $p$ if it is linear over $\mathbb{R}$ and
+    satisfies the product rule:
+    \begin{equation}
+    w(fg) = f(p)wg + g(p)wf
+    \end{equation}
+</p>
+
+<p>Denote the set of all the derivations at point $p$ by $T_p(\mathbb{R}^n)$, the tangent space at point $p$.</p>
+
+<ul>
+    <li>
+        <p class="claim"><b class="claimb"><i>Claim:</i></b>
+            The set off all derivations is a vector space.
+        </p>
+    </li>
+</ul>
+
+<ul>
+    <li>
+        <p class="claim"><b class="claimb"><i>Claim:</i></b>
+            $T_p(\mathbb{R}^n) \cong \mathbb{R}^n_p$.
+        </p>
+    </li>
+</ul>
+
+<ul>
+    <li>
+        <p class="claim"><b class="claimb"><i>Claim:</i></b>
+            The n derivations,
+
+            \begin{align}
+            \frac{\partial}{\partial x^1} \Bigr\vert_p, ... , \frac{\partial}{\partial x^n} \Bigr\vert_p
+            \end{align}
+
+            where $\frac{\partial}{\partial x^i}\Bigr\vert_pf = \frac{\partial f}{\partial x^i}(p)$ forms a
+            basis for
+            $T_p(\mathbb{R}^n)$.
+        </p>
+    </li>
+</ul>
+
+<p>We skip the proofs for above claims and prove similar results for a general smooth manifold $M$.</p>
+
+<h3>Definition</h3>
+<p>With the above motivation, we now define the tangent space at point on a smooth manifold M.</p>
+
+<p class="def"><b class="defb"><i>Definition:</i></b>
+    Let $M$ be a smooth manifold and $p$ a point of M, then a <i>derivation at</i> $p$
+    is a linear map $w:C^\infty(M)\rightarrow \mathbb{R}$ satisfying the product rule $\eqref{leib}$. Rhe set of
+    all derivations $C^\infty(M)$ at $p$, denoted by $T_pM$; is a vector space called
+    the tangent space to $M$ at $p$. An element of $T_pM$ is called a tangent vector at $p$.
+</p>
+
+<p class="def"><b class="defb"><i>Definition:</i></b>
+    If M and N are smooth manifolds, and $F:M \rightarrow N$ is a smooth map, then for reach $p \in M$, we
+    define a map
+    \begin{align}
+    dF_p:T_pM\rightarrow &amp;T_{F(p)}N \\
+    v \mapsto &amp;dF_p(v)(f) := v(f\circ F) \\
+    \end{align}
+    called the <i>differential of</i> $F$ <i>at</i> $p$. Where $f \in C^\infty(N)$.
+</p>
+
+<ul>
+    <li>
+        <div class="claim"><b class="claimb"><i>Theorem:</i></b>
+            Let $M$ be a smooth manifold, $p \in M$ and $v \in T_pM$. If $f,g \in C^\infty(M)$ agree on some
+            <i>neighborhood of p</i>, then $vf = vg$.
+        </div>
+    </li>
+</ul>
+
+<div class="proof"> <b><i>Proof:</i></b>
+
+    <i>The theorem says that, if two functions agree on a neighborhood around a point then the derivation of
+        the functions at that point regardless of their domains, agree too.</i>
+
+    <br />
+
+    Let $h=f-g$, then $h=0$ in a neighborhood of $p$.
+    Consider $\psi \in C^\infty(M)$ as follows,
+    \begin{align}
+    \psi (q) =
+    \begin{cases}
+    1, &amp;\textit{if } h(q) \neq 0 \\
+    \neq 0, &amp; \textit{if }q \in M \setminus \{p\} \\
+    = 0, &amp; \textit{if } q = p
+    \end{cases}
+    \end{align}
+
+    So, we have $\psi h = h$, and $h(p) = \psi(p) = 0 \implies vh = v(\psi h) = 0 \implies vf = vg.$
+</div>
+
+<ul>
+    <li>
+        <div class="claim"><b class="claimb"><i>Theorem:</i></b>
+            Let $M$ be a smooth manifold and $U \subseteq M$ be an open subset, and let $\imath : U
+            \hookrightarrow M$
+            be the inclusion map. For evert $p \in M$, the <i>differential</i> $d\imath_p: T_pU \rightarrow
+            T_pM$ is an
+            isomorphism.
+            <br /> <br />
+        </div>
+    </li>
+</ul>
+
+<div class="proof"><b><i>Proof:</i></b>
+    The differential is a linear map and it suffices to show that the map is a bijection.
+
+    <p><b>Injection:</b>
+        It suffices to show that $ker \ d\imath_p = \{0\}$. Consider $v \in T_pM$, s.t $d\imath_p(v) = 0 \in
+        T_pM.$ Let $B$ be a neigborhood of $p$ s.t $\overline{B}
+        \subseteq M$. Let $f \in C^\infty(U)$ be arbitrary. We can extend $f$ to $\tilde{f} \in C^\infty(M)$
+        with $f = \tilde{f}$ on $\overline{B}$. From previous theorem, we have
+
+        \begin{align}
+        vf = v(\tilde{f}\Bigr\vert_U) = v(\tilde{f}\circ \imath) = d\imath_p(v)\tilde{f} = 0
+        \end{align}
+
+        Since, this is true for aribitrary $f$, we have $v = 0$. Thus $ker \ d\imath_p = \{0\}$.
+    </p>
+
+    <p><b>Surjection:</b>
+        Consider any arbitatory $w \in T_pM$. Define the following map,
+
+        \begin{align}
+        v:C^\infty(U) \rightarrow &amp;\mathbb{R} \\
+        f \mapsto w\tilde{f}
+        \end{align}
+        where $\tilde{f} \in C^\infty(M)$ is the extension of $f$ on whole of $M$, with $\tilde{f} = f$ on
+        $\overline{B}$.
+
+        By previous theorem we have, $v \tilde{f}\Bigr\vert_U = v(\tilde{f}\circ\imath) = vf$, thus $v$ is well
+        defined and is derivation since $w$ is. And thus for every $w \in T_pM$, we have $v \in T_pU$ s.t
+        (for any $g \in C^\infty(M)$),
+
+        \begin{align}
+        d\imath_p(v)g = v(g\circ\imath) = w(\widetilde{g\circ\imath}) = wg.
+        \end{align} Thus $d\imath_p$ is surjective.
+    </p>
+    &lt;/p&gt;
+
+    <p>
+        Hence, $T_pU \cong T_pM$.
+
+    </p>
+
+    <p> <i>We thus recognize $d\imath_p(v)$ is the same derivation as v, acting on functions
+            defined on larger space but giving the same output due to the locality proved in the previous
+            theorem.</i>
+&lt;/div&gt;
+
+<ul>
+    <li>
+        <div class="claim">
+            <b class="claimb">
+                <i>
+                    Theorem:
+                </i>
+            </b>
+
+            If $M$ is an $n-dimensional$ smooth manifold, then for each $p \in T_pM$, the tangent space $T_pM$
+            is an
+            $n-dimensional$ vector space.
+        </div>
+    </li>
+</ul>
+
+<div class="proof"><b><i>Proof:</i></b>
+    Let $(U,\psi)$ be a smooth chart of M with $p \in U$. $\psi:U\rightarrow \widehat{U} \subseteq \mathbb{R}^n$
+    is a diffeomorphism. Thus, $d\psi_p$ is an isomorphism between $T_pM$ and $T_{\psi(p)}\widehat{U}$. Then by
+    previous theorem we have,
+
+    \begin{align}
+    T_pM \cong T_pU \text{ and } T_{\psi(p)}\widehat{U} \cong T_{\psi(p)}\mathbb{R}^n
+    \end{align}
+
+    Thus, $$T_pM \cong T_{\psi(p)}\mathbb{R}^n.$$
+
+    $\implies dim T_pM = n$.
+
+</div>
+
+
+<ul>
+    <li>
+        <div class="claim"><b class="claimb"><i>Theorem:</i></b>
+            Let $M_1,..., M_k$ be smooth manifolds and $\pi_j:M_1\times...\times M_k\rightarrow M_j$, the
+            projection map
+            for
+            any j, $p = (p_1,...,p_k) \in M_1\times...\times M_k$. Then the map
+
+            \begin{align}
+            \alpha:T_p(M_1\times...\times M_k) \rightarrow &amp; T_{p_1}M_1 \oplus ... \oplus T_{p_k}M_k \\
+            v \mapsto &amp; \alpha(v) := (d(\pi_1)_p(v),...,d(\pi_k)_p(v))
+            \end{align}
+
+            defines an isomorphism.
+        </div>
+    </li>
+</ul>
+
+<div>
+    <h3>Coordinate representations</h3>
+</div>
+
+<ul>
+    <li>
+        <b class="defb"><i>Tangent Vectors:</i></b> Consider a smooth n-dimensional manifold $M$, and
+        $(U,\varphi)$ a smooth chart on $M$ containing
+        $p$.
+
+        <p>
+            We know that $T_pM \cong T_{\varphi(p)}\mathbb{R}^n$. So, the basis
+            $$\left\{\frac{\partial}{\partial
+            x^1}\Bigr\vert_{\varphi(p)},...,\frac{\partial}{\partial x^n}\Bigr\vert_{\varphi(p)}\right\}$$ gives
+            a basis on $T_pM$
+            via $(d\varphi_p)^{-1}$ as follows:
+
+            We use the same notation for a basis on $T_pM$: $\left\{\frac{\partial}{\partial
+            x^1}\Bigr\vert_p,...,\frac{\partial}{\partial x^n}\Bigr\vert_p\right\}$
+
+            \begin{align}
+            \frac{\partial}{\partial x^i}\Bigr\vert_p &amp;= (d\varphi_p)^{-1} \left(\frac{\partial}{\partial
+            x^i}\Bigr\vert_{\varphi(p)}\right) \\
+            &amp;= d(\varphi^{-1})_{\varphi(p)} \left(\frac{\partial}{\partial x^i}\Bigr\vert_{\varphi(p)}\right) \\
+            \implies \frac{\partial}{\partial x^i}\Bigr\vert_p f &amp;= \frac{\partial}{\partial
+            x^i}\Bigr\vert_{\varphi(p)}
+            \left(f\circ\varphi^{-1}\right)\\
+            &amp;= \frac{\widehat{\partial f}}{\partial x^i}(\widehat{p})
+            \end{align}
+
+            where, $\widehat{f} \equiv f\circ\varphi^{-1}, \widehat{p} = \varphi(p)$.
+
+            $\frac{\partial}{\partial x^i}\Bigr\vert_p$ are called <i>coordinate vectors</i> at $p$ associated
+            with the given
+            coordinate chart.
+
+            We can thus write a vector $v \in T_pM$ as
+            $$v = v^i \frac{\partial}{\partial x^i}\Bigr\vert_p$$. And $v^1,...,v^n$ are the components of the
+            vector $v$.
+
+            Note that, $v^j = v(x^j)$; where $x^j$,
+            \begin{align}
+            x^j: U \rightarrow &amp;\mathbb{R}\\
+            q \mapsto &amp;\delta^j_i \varphi(q)^i
+            \end{align}
+        </p>
+
+    </li>
+
+    <li>
+
+        <b class="defb"><i>Differentials:</i></b>
+        <div class="figure">
+            <img src="..\..\..\..\assets\images\CaM\differential.jpg" alt="" class="mid" />
+        </div>
+
+
+        Consider charts, $(U, \varphi) \ni p$ and $(V,\psi) \ni F(p)$.
+        Denote $\widehat{F} = \psi\circ F \circ \varphi^{-1}: \varphi(U\cap F^{-1}(V)) \rightarrow \psi(V)$
+
+        <p>$d\widehat{F}_\widehat{p}$ is simply given by the Jacobian matrix, which relates vectors under
+            coordinate
+            transformations in Eculidean spaces. (One can check this easily using the definition of differential
+            and
+            chain rule )</p>
+
+        Since, $F \circ \varphi^{-1} = \psi^{-1}\circ\widehat{F}$;
+
+        \begin{align}
+        dF_p\left(\frac{\partial}{\partial x^i}\Bigr\vert_p\right) &amp;=
+        dF_p\left(d(\varphi^{-1})_p\left(\frac{\partial}{\partial x^i}\Bigr\vert_\widehat{p}\right)\right) =
+        d(\psi^{-1})_{\widehat{F}(p)}\left(d\widehat{F}_\widehat{p}\left(\frac{\partial}{\partial
+        x^i}\Bigr\vert_\widehat{p}\right)\right) \\
+        &amp;=d(\psi^{-1})_{\widehat{F}(\widehat{p})} \left(\frac{\partial \widehat{F}^j}{\partial
+        x^i}(\widehat{p})\frac{\partial}{\partial y^j}\Bigr\vert_{\widehat{F}(\widehat{p})}\right) \\
+        &amp;= \frac{\partial \widehat{F}^j}{\partial x^i}(\widehat{p})\frac{\partial}{\partial y^j}\Bigr\vert_F(p)
+
+        \end{align}
+
+        Just like the Euclidean! We will also call differential as <i>pushforward</i> for the intuitive reason
+        of
+        pushing
+        the tangent vector in the direction of the smooth map $F$. We will also define the so called
+        <i>pullback</i> in
+        the next section.
+
+        <ul>
+            <li class="def">
+                <b><i>
+                        Example:
+                    </i></b>
+
+                <p>
+                    Consider a curve on a smooth n-dimensional manifold M, $\gamma:J \subseteq \mathbb{R}
+                    \rightarrow M$, with the <i>velocity vector</i> at $t_0, \gamma'(t_0)$ defined as,
+
+                    \begin{align}
+                    T_{\gamma(t_0)}M \ni \gamma'(t_0):= d\gamma\left(\frac{\partial}{\partial
+                    t}\Bigr\vert_{t_0}\right) \implies \gamma'(t_0)f= \frac{\partial}{\partial t} (f\circ\gamma)
+                    \Bigr\vert_{t_0}.
+                    \end{align}
+                    Let $\widehat{\gamma} = x\circ\gamma\circ id_J = x\circ\gamma =: (\gamma^1,...,\gamma^n) \in
+                    \mathbb{R}^n$ where, $(J,id_J)$ defines the chart of $J$ onto $J\subset \mathbb{R}$, and
+                    $(U_{\gamma(t_0)},x)$ defines a chart of $U_{\gamma(t_0)}$ (neighborhood of $\gamma(t_0)$)
+                    onto $x(U_{\gamma(t_0)}) \subseteq \mathbb{R}^n$. Sometimes, we also the notation writing
+                    $\gamma(t) = (\gamma^1,...,\gamma^n)$ which is actually $x^{-1}(\gamma^1,...,\gamma^n)$.
+                    Using the coordinate representation of the differential, we have
+                    \begin{align}
+                    \gamma'(t_0) = \frac{\partial \gamma^i}{\partial t}\Bigr\vert_{t_0}\frac{\partial}{\partial
+                    x^i}\Bigr\vert_{\gamma(t_0)}
+                    \end{align}
+
+                    <i>Velocity vector</i> at a point on the curve is a tangent vector at that point whose
+                    components in the coordinate basis are the derivatives of the component functions of the
+                    curve. We also denote this vector by $\frac{d \gamma}{dt}(t_0)$ or $\dot{\gamma}(t_0)$.
+                    We will show, every tangent vector is a velocity vector of some curve on $M$.
+                </p>
+
+
+            </li>
+        </ul>
+
+    </li>
+
+
+    <li>
+
+        <b class="defb"><i>Change of Coordinates:</i></b>
+
+        <div class="figure">
+            <img src="..\..\..\..\assets\images\CaM\ChangeOfCoordinates.jpg" alt="" class="mid" />
+        </div>
+
+        Consider two charts $(U,\varphi)$ and $(V,\psi)$ with $p \in U\cap V$.
+
+        <p>
+
+            \begin{align}
+            \psi\circ\varphi^{-1} : \varphi(U\cap V) \longrightarrow &amp;\psi(U \cap V) \\
+            x \longmapsto &amp;\varphi\circ\psi^{-1}(x) := (\widetilde{x}^1(x),...,\widetilde{x}^n(x))
+            \end{align}
+
+            The differential between the eculidean spaces gives the following,
+            \begin{align}
+            d(\psi\circ\varphi^{-1})_\varphi(p)\left(\frac{\partial}{\partial x^i}\Bigr\vert_{\varphi(p)}\right)
+            = \frac{\partial \widetilde{x}^j}{\partial x^i}\Bigr\vert_{\varphi(p)}\frac{\partial}{\partial
+            \widetilde{x}^j}\Bigr\vert_{\varphi(p)}
+            \end{align}
+
+            A coordinate vector at p associated with the chart $(U,\varphi)$ can be written as,
+
+            \begin{align}
+            \frac{\partial}{\partial x^i}\Bigr\vert_p &amp;= d(\varphi^{-1})\left(\frac{\partial}{\partial
+            x^i}\Bigr\vert_{\varphi(p)}\right) \\
+            &amp;= d(\psi^{-1})_{\psi(p)} d(\psi\circ\varphi^{-1})_{\varphi(p)}\left(\frac{\partial}{\partial
+            x^i}\Bigr\vert_{\varphi(p)}\right) \\
+            &amp;= \frac{\partial \widetilde{x}^j}{\partial x^i}(\widetilde{p})\frac{\partial}{\partial
+            \widetilde{x}^j}\Bigr\vert_p
+            \end{align}
+            We thus have the following transformation law for a tangent vector at $p \in U\cap V$ under a change
+            of coordinates.
+
+            \begin{align}
+            \widetilde{v}^i = \frac{\partial \widetilde{x}^i}{\partial x^j}\Bigr\vert_{\varphi(p)}v^j.
+            \end{align}
+        </p>
+    </li>
+</ul>
+
+<b><i>Now for the Geometrical result!</i></b>
+
+<div class="claim"><b><i class="claimb">Theorem:</i></b>
+    Suppose $M$ is a smooth n-dimensional manifold and $p \in M$, then every $v \in T_pM$ is the velocity of
+    some smooth curve in $M$.
+</div>
+
+<div class="figure">
+    <img src="..\..\..\..\assets\images\CaM\velocity.png" alt="" class="mid" />
+</div>
+
+
+<div>
+    <b><i>Proof:</i></b>
+
+    <p>
+
+        Consider a chart $U,\varphi$ with $p \in U$ (i.e <i>centered at $p$</i>). Write $v = v^i
+        \frac{\partial}{\partial x^i}\Bigr\vert_p$. Then since $U$ is open, $\exists \epsilon$ such that
+
+        \begin{align}
+        \gamma:(-\epsilon,\epsilon) \rightarrow &amp;U \\
+        t \mapsto &amp; (tv^1,...,tv^n)
+        \end{align}
+
+        is smooth with, $\gamma(0) = p$ and $\gamma'(0) = v^i\frac{\partial}{\partial x^i}\Bigr\vert_{\gamma(0)}
+        = v.$
+    </p>
+</div>
+
+<div class="claim"><b class="claimb"><i>Theorem:</i></b>
+    If $F:M\rightarrow N$ be a smooth map, and let $\gamma:J \rightarrow M$ be a smooth curve. For any $t_0 \in
+    J$ , the velocity at
+    $t=t0$ of the composite curve $F\circ \gamma: J \rightarrow N$ is given by
+
+    \begin{align}
+    (F\circ\gamma)'(t_0) = dF(\gamma'(t_0)).
+    \end{align}
+</div>
+
+<div class="claim"><b class="claimb"><i>Theorem:</i></b>
+    If $F:M\rightarrow N$ is a smooth map, $p \in M$, and $v \in T_pM$. Then
+
+    \begin{align}
+    dF_p(v) = (F\circ\gamma)'(0)
+    \end{align}
+</div>
+
+Thus it also common to work with the definition of tangent space at a point as the set of all velocity vectors
+to the curves passing through that point on the manifold!
+<h2>The Tangent Bundle</h2>
+
+<ul>
+    <li>
+        <div class="def"><b class="defb"><i>Definition:</i></b>
+            A <i>Bundle</i> is a 3-tuple $(E,\pi, M)$, where E and M are two manifolds and $\pi$ (often called
+            <i>projection map</i>) is a continuous surjection from E to the <i>base manifold</i> $M$.
+        </div>
+    </li>
+
+    <li> The Tangent bundle is $(TM,\pi,M)$ (or simply written TM) where
+        <ul>
+            <li> $TM = \bigcup_{p \in M} T_pM$. </li>
+            <li> $\pi : TM \rightarrow M$ takes $v \in TM$ to the point $p \in M$ for which $v \in T_pM$.</li>
+            <li> <b>$TM$ as a $2$ dim $M$ manifold:</b></li>
+            We use the topology and the charts on M to define the corresponding structure on TM using the map
+            $\pi$ as follows.
+
+            Consider the chart $(U,x) \in \mathcal{A}_M$ and construct the chart $\left(preim_\pi(U),\xi\right)$
+            on TM with $\xi$ defined by:
+
+            \begin{align}
+            \xi : &amp;preim_\pi(U) \longmapsto \mathbb{R}^{2\text{dim}M} \\
+            &amp;v \longmapsto \left(x^1(\pi(v)), . . ., x^{\text{dim}M}(\pi(v)), v^1, . . .,
+            v^{\text{dim} M}\right)
+            \end{align}
+            Where,
+            \begin{equation}
+            v = v^i \frac{\partial}{\partial x^i}\bigg{|}_{\pi(X)}
+            \end{equation}
+        </ul>
+
+        <div class="figure">
+            <img src="..\..\..\..\assets\images\CaM\Tbundle.png" alt="" class="mid" />
+            <small><i>Coordinates on $TM$. Image Credits: Introduction to Smooth Manifolds, John M.
+                    Lee.</i></small>
+        </div>
+
+
+    <li> $E\xmapsto{\ \pi \ } M$ is a bundle then,
+        <ul>
+            <li> If $\forall p \in M$ $preim_\pi({p}) \cong F$ for some manifold F, then $E\xmapsto{\
+                \pi \ } M$ is called a <b><i>fibre bundle</i></b> with (typical) fibre F. </li>
+
+            <li> A map $\sigma : M \mapsto E$ is called a <i>section</i> of the bundle if
+                $\pi\circ\sigma = id_M$.</li>
+
+            <li> Product Bundles $\subset$ Fibre Bundles $\subset$ Bundles </li>
+        </ul>
+    </li>
+
+&lt;/ul&gt;
+
+&lt;/ul&gt;
+
+<h2>The Lagrangian System</h2>
+
+<p class="indent">A Lagrangian system (M,L) on a configuration space M, a smooth n-dimensional manifold is
+    defined by a smooth function
+    $L:TM\times\mathbb{R}\mapsto \mathbb{R}$ called the <b><i>Lagrangian function</i></b> or
+    <b><i>Lagrangian.</i></b>
+
+    We now formulate the Principle of Least Action which describes the (dynamics of) Lagrangian system.
+
+<p>Consider the space of smooth path on M with fixed end points,</p>
+\begin{align}
+P(M)^{q_1,t_1}_{q_0,t_0} := \{\gamma:[t_0,t_1] \mapsto M \mid\gamma(t_0) = q_0,\gamma(t_1) = q_1 \}.
+\end{align}
+
+We consider a variation $\Gamma$ of $\gamma \in P(M)$ as a <i>smooth 1-parameter family of paths on M</i> -
+$\{\gamma_\epsilon\},\gamma_\epsilon \in P(M)$, with $\gamma_0 = \gamma$. We define the <i>vartiational
+    derivative</i> of a functional $F$ on the space of paths in M, i.e $F: P(M) \rightarrow \mathbb{R}$ as
+
+\begin{align}
+\delta F = \frac{d}{d\epsilon} F(\gamma_\epsilon)\Bigr\vert_{\epsilon=0}
+\end{align}
+
+We also have the tangential lift of the path $\gamma$ to $TM$, as
+
+\begin{align}
+\gamma': [t_0,t_1] \rightarrow &amp;TM \\
+t \mapsto &amp; (\gamma(t), \dot{\gamma}(t))
+\end{align}
+
+The notation is familiar from the previous sections, where we denote the veolocity vector of the curve $\gamma$
+by $\dot{\gamma}(t)$, where$\gamma(t) = (\gamma^1,...,\gamma^n)$ and $\dot{\gamma}(t) = \frac{d\gamma^i}{dt}
+\frac{\partial}{\partial x^i}\Bigr\vert_{\gamma(t)}$with respect to the coordinate charts centered at
+$\gamma(t)$.
+
+We have thus lifted the path $\gamma$ to $TM$ where we now have information about the <i>position $p$ in $M$</i>
+and also the <i>it's velocity in $T_pM$</i> as a function of time, where the Lagrangian does it's magic.
+
+Thus, under standard coordinates on $TM$, we have $\gamma'(t) =
+(\gamma^1,...\gamma^n,\dot{\gamma}^1,...,\dot{\gamma}^n)$, where here, the dots actually indicate the time
+derivates.
+
+<div class="def"><b class="defb"><i>Definition:</i></b>
+    The action functional $S:P(M) \mapsto \mathbb{R}$ of a Lagrangian system (M,L) is defined by
+    \begin{equation}
+    S(\gamma) = \int_{t_0}^{t_1} L(\gamma'(t),t)dt
+    \end{equation}
+</div>
+
+<div class="def"><b class="defb"><i>Principle Of Least Action:</i></b>
+    The motion of a given Lagrangian system (M,L) with coordinates $q_0$ at time $t_0$ and $q_1$ at $t_1$ is
+    given by the critical point (extremal) of the action functional S,
+
+    \begin{equation}
+    \delta S(\gamma_\epsilon) = \frac{d}{d\epsilon} \Bigr\vert_{\epsilon=0} S(\gamma_\epsilon) = 0.
+    \end{equation}
+</div>
+
+<div class="figure">
+    <img src="..\..\..\..\assets\images\CaM\Lift!.jpg" alt="" class="mid" />
+
+</div>
+
+
+Using the standard coordinates on $TM$, one can compute the condition for extremizing the action to obtain a
+coordinate reperesentation of the Principle of Least Action.
+
+<div class="claim"><b class="claimb"><i>Theorem: (Euler-Lagrange Equations)</i></b>
+    The equations of motion of a Lagrangian system (M,L) in standard coordinates on TM are given by the
+    Euler-Lagrange equations
+
+    \begin{equation}
+    \frac{\partial L}{\partial q^i} (\mathbf{q}(t),\mathbf{\dot{q}}(t),t) - \frac{d}{dt}\left(\frac{\partial
+    L}{\partial q^i}(\mathbf{q}(t),\mathbf{\dot{q}}(t),t)\right) = 0
+    \end{equation}
+    corresponding to every degree of freedom labeled by $i$ i.e $i = 1, ..., n$. ($n = \text{dim}M$)
+</div>
+
+<div class="proof">
+    <b class="proofb"><i>Proof:</i></b>
+
+    We choose the (fixed) end points of the paths to lie in an open set $U \subseteq M$, such that the variation
+    lies within $U$.
+
+    \begin{align}
+    0 &amp;= \frac{d}{d\epsilon} \Bigg\vert_{\epsilon=0} S(\gamma_\epsilon) \\
+    &amp;= \frac{d}{d\epsilon} \int_{t_0}^{t^1} L(\mathbf{q}_\epsilon(t), \mathbf{\dot{q}}_\epsilon(t),t) dt \\
+    &amp;= \sum_{i=1}^{n} \int_{t_0}^{t^1} \left(\frac{\partial L}{\partial q^i}\frac{\partial
+    q_\epsilon^i}{\partial
+    \epsilon}\Big\vert_{\epsilon=0} + \frac{\partial L}{\partial \dot{q}_\epsilon^i}\frac{\partial
+    \dot{q}_\epsilon^i}{\partial
+    \epsilon}\Big\vert_{\epsilon=0}\right)dt \\
+    &amp;= \sum_{i=1}^{n} \int_{t_0}^{t^1} \left(\frac{\partial L}{\partial q^i}\delta q^i + \frac{\partial
+    L}{\partial \dot{q}^i}\delta\dot{q}^i\right)dt \\
+    &amp;= \sum_{i=0}^{n} \int_{t_0}^{t^1} \left(\frac{\partial L}{\partial q^i}-\frac{d}{dt}\frac{\partial
+    L}{\partial \dot{q}^i}\right)\delta q^idt + \sum_{i=1}^{n}\frac{\partial L}{\partial \dot{q}^i}\delta
+    q^i\Bigg\vert_{t_0}^{t_1}
+    \end{align}
+
+    A typical abuse of notation is done where the standard coordinates of $q(t)$ are denoted by the same
+    notation and the composition map from $\mathbb{R}^n$ to $\mathbb{R}$ allowing us to use the chain rule and
+    the integration by parts are not indicated. The second term vanishes since the
+    variation is with fixed ends, $i.e. \delta q^i(t) = \frac{d}{d\epsilon}q^i \Bigr\vert_{\epsilon=0,t=t_0,t_1}
+    = 0$; which leaves with the first term to vanish, thus giving the Euler-Lagrange Equations.
+</div>
+
+<div class="claim"><b class="claimb"><i>Claim:</i></b>
+    This procedure can be performed smoothly across any coordinate chart and thus extremizing the action in
+    every coordinate representation, giving the same equations in every such reperesentation.
+</div>
+
+<ul>
+    <li><b><i>Remarks:</i></b>
+        <ul>
+            <li>Last claim to be proved.</li>
+            <li>History to be added.</li>
+            <li>Credits to be given.</li>
+            <li>Work on balance between personal coherence and public readability/accessibility not yet
+                initiated.</li>
+            <li>Bundles to be updated with a more Tangent Space like treatment.</li>
+            <li>The title of the page is inspired by the talk titled "Theory of manifolds <i>ala</i> Morse"
+                delivered by Dr. Somnath Basu, IISER Kolkata during the <i>Workshop On Geometry, Analysis and
+                    Mathematical
+                    Physics</i> at NISER Bhubaneswar during July-August 2023.</li>
+        </ul>
+
+    </li>
+
+</ul>
+</p></li></ul></p></div>
+
+</body>
+
+</html>
