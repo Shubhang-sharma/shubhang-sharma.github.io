@@ -19,11 +19,12 @@ layout: homepage
     <h1 class="hidden ">$\psi$ Activity</h1>
     <!-- <img src="..\assets\images\crab.png" class="center small" alt=""> -->
     <ul>
-        <li><a href=".\bundle\">Bundle </a>- A Math-Phys Blog.</li>
-        <li><a href=".\fields\">Fields </a>- A Life Blog.</li>
+        <li><a href="..\bundle\">Bundle </a>- A Math-Phys Blog.</li>
+        
         <!-- <li>Some <a href="https://drive.google.com/file/d/1Fa6b3XbonL4S3aMMx8kzjKcSMHVinx6H">notes</a> on perturbation
         theory.</li> -->
         <li>Notes on Quantum Field Theory - <a href="">Spinor Fields</a> | <a href=""> Renormalization</a>| <a href="">Summary Notes</a>.</li>
+        <li>A page dedicated to some awesome people in academia! (Coming Soon)</li>
         
     </ul>
     </div>
@@ -33,8 +34,12 @@ layout: homepage
     <div class="yada">
     <h1 class="hidden">$\mathcal{L}$ 'The yada yada'</h1>       
     <ul>
+        <li><a href="..\fields\">Fields </a>- A Life Blog.</li>
+        <li><a href="..\art-review\">Art Review</a> - Often times when I consume art, I wish to express what I feel. I am lucky to have couple of people around me who regularly make art. But, most of the times, lack of headspace prevents me to probe and write the art they make. I thus decided to dedicate a page to their art, where I can write about them. It will also contain other art consumption/expression too. </li>
+        <li>My Strava <a href="https://www.strava.com/athletes/103649902">account</a>.</li>
         <li>The Yada Yada reference...<small><a href="https://www.youtube.com/watch?v=VFdSML-2BkI"><i>ref.</i></a></small></li>
-        <li><a href="https://www.strava.com/athletes/103649902">Link</a> to my Strava account.</li>
+
+        
         <!-- <li>Personal <a href="https://sites.google.com/view/shubhangzsharma/">blog site</a>. -->
         <!-- <li><a href="https://project-ions.github.io/">Projections</a> - Inspired by VlogBrothers' Brotherhood 2.0. -->
         <!-- </li> -->

@@ -6,8 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- <link rel="shortcut icon" type="image/png" href="/..\dump/images/favicon.ico" /> -->
-    <link rel="stylesheet" href={{ " ..\assets\css\hstyles.css" | relative_url }}>
-    <link rel="stylesheet" href={{ " ..\assets\css\pstyles.css" | relative_url }}>
+    <link rel="stylesheet" href={{ " \assets\css\hstyles.css" | relative_url }}>
+    <link rel="stylesheet" href={{ " \assets\css\pstyles.css" | relative_url }}>
 
 
     <script>
@@ -40,7 +40,7 @@
     <header>
         <nav>
             <ul>
-                <li class="nav"><a href="..\" class="link"> Home </a></li>
+                <li class="nav"><a href="/" class="link"> Home </a></li>
             </ul>
         </nav>
     <h1 class = "pageTitle"> {{page.title}}</h1>
@@ -49,5 +49,9 @@
     
     {{ content }}
 </body>
+
+<footer>
+    <div>   <hr> </div>
+</footer>
 
 </html>
