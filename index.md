@@ -32,7 +32,7 @@ layout: homepage
         
         <!-- <li>Some <a href="https://drive.google.com/file/d/1Fa6b3XbonL4S3aMMx8kzjKcSMHVinx6H">notes</a> on perturbation
         theory.</li> -->
-        <li>Notes on Quantum Field Theory - <a href="">Spinor Fields</a> | <a href=""> Renormalization</a>| <a href="">Summary Notes</a>.</li>
+        <li>Notes on Quantum Field Theory - <a href="\assets\docs\qed.djvu">Spinor Fields</a> | <a href="\assets\docs\renormalization.djvu"> Renormalization</a>| <a href="">Summary Notes</a>.</li>
         <li>A page dedicated to some awesome people in academia! (Coming Soon)</li>
         
     </ul>
