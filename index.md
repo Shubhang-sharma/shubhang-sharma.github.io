@@ -3,17 +3,26 @@ layout: homepage
 ---
 
 <div class="container">
+
+  <div class="action">
+    \begin{multline*}
+    Z=\int D \text { (Fields) } \exp \left(i \int d^4 x \sqrt{-g}\left(R-F_{\mu \nu} F^{\mu \nu}-G_{\mu \nu} G^{\mu \nu}-W_{\mu \nu} W^{\mu \nu} \\
+    + \sum_i \bar{\psi}_i \not \psi_i+D_\mu H^{+} D^\mu H-V(H)-\lambda_{i j} \bar{\psi}_i H \psi_j\right)\right)
+    \end{multline*}
+   </div>
+
 <section class="hidden" id="about">
     <div class="about">
     <h1 class="hidden">$\exists$ About </h1>
     <!-- <img src="..\assets\images\home_profile.jpg" class="center mid" alt=""> -->
+    
     <p>
         I am a fourth year undergraduate at National Institute of Science Education and Research (NISER) Bhubaneswar. I am interested in mathematical problems which are connected to theoretical Physics - for example, see <a href="https://www.ma.imperial.ac.uk/~jbm18/ijg/notes/introtogaugetheory.pdf">Gauge theory</a> or <a href="https://people.math.harvard.edu/~jeffs/symplectic.html">Symplectic Geometry</a>. This direction starts with a rigorous formulation of the physics and tackle mathematical problems in this context. I like to cycle, run or indulge in any long distance activity. I am also a passionate consumer of Film, 3D/Web Art and Music. <i>I make art without being an artist.</i> 
     </p>
-    <p> This site is built using simple HTML and CSS. The blogs are automated using Jekyll. Thanks to websites of <a href=""></a> and Maxim Jeffs, allowing me to inherit some source code and modify according to my taste :). </p>
+    <p> This site is built using simple HTML and CSS. The blogs are automated using Jekyll. Thanks to websites of <a href="https://11de784a.github.io/about">Ayush Singh</a> and <a href="https://mjeffs.net/">Maxim Jeffs</a> from which I have inherit some of the source code according to my taste :). </p>    
     </div>
 </section>
-
+<hr>
 <section id="projects" class="hidden">
     <div class="projects">
     <h1 class="hidden ">$\psi$ Activity</h1>
@@ -29,7 +38,7 @@ layout: homepage
     </ul>
     </div>
 </section>
-
+<hr>
 <section id="yada" class="hidden">
     <div class="yada">
     <h1 class="hidden">$\mathcal{L}$ 'The yada yada'</h1>       

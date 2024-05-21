@@ -1,14 +1,21 @@
-
 body {
 	font-size: 19px;
 	background-color: #fff;
 	color: #000;
-	max-width: 85rem;
+	/* max-width: 85rem; */
 	text-align: center;
 	font-weight: 400;
 }
 
-.link{
+
+
+
+
+.mid_pad {
+	margin-bottom: -100px;
+}
+
+.link {
 	text-decoration: none;
 	color: maroon;
 }
@@ -31,21 +38,26 @@ header>h1 {
 
 section {
 	font-family: 'EB Garamond';
-	display: grid;
+	display: block;
 	place-items: center;
-	/* min-height: 50vh; */
+	/* min-height: 100vh; */
+	padding: 20px;
 }
-
-
+.action {
+	display: grid;
+	place-content: center;
+}
 nav>ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
 }
-.nav{
-    display: inline;
+
+.nav {
+	display: inline;
 	padding: 8px;
 }
+
 /* 
 nav>ul>li>a:hover, h1.hidden:hover {
 	background-color: #333;
@@ -54,22 +66,23 @@ nav>ul>li>a:hover, h1.hidden:hover {
 	transition: 0.5s;
 } */
 :target {
-    -webkit-animation: target-fade 1s;
-    -moz-animation: target-fade 1s;
-    -o-animation: target-fade 1s;
-    animation: target-fade 1s;
+	-webkit-animation: target-fade 1s;
+	-moz-animation: target-fade 1s;
+	-o-animation: target-fade 1s;
+	animation: target-fade 1s;
 }
 
-hr{
+hr {
 	width: 50%;
 }
 
-h2{
+h2 {
 	font-weight: normal;
 	font-family: 'GFS Didoy';
 	text-align: center;
 }
-h3{
+
+h3 {
 	font-weight: normal;
 	font-family: Garamond, Serif;
 	text-align: center;
@@ -83,11 +96,12 @@ h3{
 
 a {
 	color: #333;
-	text-decoration:none;
+	text-decoration: none;
 	color: maroon;
 }
+
 a:hover {
-	text-decoration:overline;
+	text-decoration: overline;
 	color: maroon;
 }
 
@@ -103,38 +117,41 @@ nav a:hover {
 	text-decoration: none;
 } */
 
-figure img,figure video {
-    display: block;
-    float: unset;
-    margin: auto;
-    padding: 1rem 0
+figure img,
+figure video {
+	display: block;
+	float: unset;
+	margin: auto;
+	padding: 1rem 0
 }
 
 figure figcaption {
-    font-size: 2.07rem;
-    text-align: center
+	font-size: 2.07rem;
+	text-align: center
 }
 
-img,video {
-    margin-left: 1.6rem;
-    width: 24%
+img,
+video {
+	margin-left: 1.6rem;
+	width: 24%
 }
 
 
-.wide img,.wide video {
-    width: 90%
+.wide img,
+.wide video {
+	width: 90%
 }
 
 img.mid {
-    display: block;
-    margin: 0 auto;
-    width: 50%;
+	display: block;
+	margin: 0 auto;
+	width: 50%;
 }
 
 img.small {
 	display: block;
-    margin: 0 auto;
-    width: 10%;
+	margin: 0 auto;
+	width: 10%;
 }
 }
 
@@ -146,13 +163,32 @@ footer {
 
 
 
-.show{
+.show {
 	opacity: 1;
-	}
+}
 
 
-	@media(prefers-reduced-motion){
-		.hidden {
-			transition: none:
-		}
+@media(prefers-reduced-motion) {
+	.hidden {
+		transition: none:
 	}
+}
+
+/* section.hidden {
+		background-color: #e8e7e6;
+		padding: 50px;
+		margin: 20px;
+		box-shadow: 20px;
+	} */
+
+div.about,
+div.projects,
+div.yada {
+	background-color: rgba(246, 246, 246, 0.2);
+	padding: 10px;
+	box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.2), 0 4px 15px 0 rgba(0, 0, 0, 0.19);
+	/* -webkit-backdrop-filter: blur(5px);
+	backdrop-filter: blur(5px); */
+}
+/* 
+

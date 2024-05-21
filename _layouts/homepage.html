@@ -21,16 +21,23 @@
       gtag('config', 'UA-168476475-1');
     </script>
   
-    <script>
-      MathJax = {
+  <script>
+    MathJax = {
+
+        loader: {
+            load: ['[tex]/ams']
+        },
         tex: {
-          inlineMath: [
-            ['$', '$'],
-            ['\\(', '\\)']
-          ]
+            packages: { '[+]': ['ams'] },
+            inlineMath: [
+                ['$', '$'],
+                ['\\(', '\\)']
+            ]
+
+
         }
-      };
-    </script>
+    };
+</script>
     <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js">
     </script>
   
@@ -51,7 +58,10 @@
       <hr>
     </header>
 
-    {{ content }}
+ 
+
+    <div class="bg">{{ content }}</div>
+    
 </body>
 
 </html>
