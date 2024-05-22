@@ -192,9 +192,6 @@ div.yada {
 }
 
 
-div.about:hover,
-div.projects:hover,
-div.yada:hover {
-	background-color: rgba(152, 160, 163, 0.2);
-
+div.projects:hover, div.about:hover, div.yada:hover {
+	background-color: rgba(202, 212, 215, 0.3);
 }
