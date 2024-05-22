@@ -1,4 +1,5 @@
-Preview reads the page title too. Fix this! -  Fixed
-Fonts are not found!
-Custom Preview (Excerpt) to probably include images too.
+Learn to implement SVG.
+Learn Javascript to control the SVG!
+
+
 
