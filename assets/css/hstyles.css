@@ -365,9 +365,9 @@ a:hover,a:active {
 }
 
 a::after {
-    content: "";
-    color: #D01137;
-    margin-left: .115rem
+    content: "^";
+    color: maroon;
+/*    margin-left: .115rem*/
 }
 
 a.footnote:link,a.footnote:visited,a.footnote:focus,a.reversefootnote:link,a.reversefootnote:visited,a.reversefootnote:focus {
@@ -468,7 +468,11 @@ p#success,iframe#response {
 
 iframe {
     display: block;
-    padding: 5%;
+/*    padding: 5%;*/
     margin: auto;
     border: 0;
+}
+
+figure {
+    padding: 5%;
 }

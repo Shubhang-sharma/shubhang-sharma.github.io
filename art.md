@@ -1,7 +1,7 @@
 ---
 title: Art Review
 layout: art
-permalink: art-review/
+permalink: artreview/
 ---
 
 <div class="myposts">
