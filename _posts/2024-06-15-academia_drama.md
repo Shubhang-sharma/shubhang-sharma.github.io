@@ -1,9 +1,9 @@
----
+<!-- ---
 title: Academia 
 layout: default
 tags: academia
 categories: Fields
----
+--- -->
 
 Through conversations with Abha about Academia after recent rejection of Master's thesis on the interesection of differential geometry and Physics, I gained a deeper perspective on Academia. 
 

@@ -7,8 +7,10 @@ body {
 	font-weight: 400;
 }
 
-
-
+h1, h2 {
+    font-family: "Playwrite NG Modern", cursive;
+	font-size: 30px;
+}
 
 
 .mid_pad {
@@ -78,8 +80,9 @@ hr {
 
 h2 {
 	font-weight: normal;
-	font-family: 'GFS Didoy';
-	text-align: center;
+	font-family: "Playwrite NG Modern", cursive;
+	font-size: 22px;
+	/* text-align: center; */
 }
 
 h3 {
@@ -153,7 +156,7 @@ img.small {
 	margin: 0 auto;
 	width: 10%;
 }
-}
+
 
 footer {
 	align-items: center;
@@ -170,7 +173,7 @@ footer {
 
 @media(prefers-reduced-motion) {
 	.hidden {
-		transition: none:
+		transition: none;
 	}
 }
 
@@ -194,4 +197,12 @@ div.yada {
 
 div.projects:hover, div.about:hover, div.yada:hover {
 	background-color: rgba(202, 212, 215, 0.3);
+}
+
+footer {
+	font-size: 17px;
+}
+
+.about p {
+	padding: 15px;
 }

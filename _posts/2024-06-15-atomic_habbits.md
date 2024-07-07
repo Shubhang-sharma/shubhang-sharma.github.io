@@ -1,9 +1,9 @@
----
+<!-- ---
 title: Are writers avid readers?
 layout: default
 tags: Writing/Reading
 categories: Fields
----
+--- -->
 
 So I'm listening the audiobook 'Atomic Habbits'. I heard this book from Ali Abdal before I joined college, but never gave it a read. I am not a person who works on myself unless I know that it is important to, unless I really appreciate it. So, these days while I am trying to cooking, studying and exercise routine; I thought it would be great to here out what other people have to say about this while I learn from my experiences too. 
 

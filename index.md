@@ -13,14 +13,10 @@ layout: homepage
 
 <section class="hidden" id="about">
     <div class="about">
-    <h1 class="hidden">$\exists$ About </h1>
+    <h2 class="hidden">$\exists$ ABOUT </h2>
     <!-- <img src="..\assets\images\home_profile.jpg" class="center mid" alt=""> -->
-    
     <p>
-        I am a fourth year undergraduate at National Institute of Science Education and Research (NISER) Bhubaneswar. I am fascinated by the mathematical problems which are connected to theoretical Physics - for example, see <a href="https://www.ma.imperial.ac.uk/~jbm18/ijg/notes/introtogaugetheory.pdf">Gauge theory</a> or <a href="https://people.math.harvard.edu/~jeffs/symplectic.html">Symplectic Geometry</a>. These directions are epitome of arenas where both math and physics could be understood rigorously, often helping both the fields. I am currently pursuing this direction on my own due to lack of humanity interested in these locally, but also due to my disinclination to reach out globally, not that there is appreciable humanity around excited about these topics. For my master's thesis, I am working on AdS/CFT correspondece with Dr. Yogesh Shrivastava who also taught us two Quantum Field Theory courses.
-         
-         I like to cycle, run or indulge in any long distance activity. I am also a passionate consumer of Film, 3D/Web Art and Music. <i>I make art without being an artist.</i> To be more precise, if Life was a bundle I enjoy looking at the fibers of it (in my own way). I am lucky to meet couple of other <i>fiberists of life</i> - <a href="https://sites.google.com/view/trivikramudu/home?authuser=0">Trivikram</a> and <a href="https://www.notion.so/abhasjournal/Journal-cb09bb7d45aa469885a122dadc45ffa0?pvs=4">Abha</a>, having their own style.
-
+        I am a fourth year undergraduate at National Institute of Science Education and Research (NISER) Bhubaneswar. I am fascinated by the mathematical problems which are connected to theoretical Physics - for example, see <a href="https://www.ma.imperial.ac.uk/~jbm18/ijg/notes/introtogaugetheory.pdf">Gauge theory</a> or <a href="https://people.math.harvard.edu/~jeffs/symplectic.html">Symplectic Geometry</a>. These directions are epitome of arenas where both math and physics could be understood rigorously, often helping both the fields. I am currently pursuing this direction on my own due to lack of humanity interested in these locally, but also due to my disinclination to reach out globally, not that there is appreciable humanity around excited about these topics. For my master's thesis, I am working on AdS/CFT correspondece with Dr. Yogesh Shrivastava who also taught us two Quantum Field Theory courses. I like to cycle, run or indulge in any long distance activity. I am also a passionate consumer of Film, 3D/Web Art and Music. <i>I make art without being an artist.</i> To be more precise, if Life was a bundle I enjoy looking at the fibers of it (in my own way). I am lucky to meet couple of other <i>fiberists of life</i> - <a href="https://sites.google.com/view/trivikramudu/home?authuser=0">Trivikram</a> and <a href="https://www.notion.so/abhasjournal/Journal-cb09bb7d45aa469885a122dadc45ffa0?pvs=4">Abha</a>, having their own style.
     </p>
     <p> This site is built using simple HTML and CSS. The blog styling is automated using Jekyll. Thanks to websites of <a href="https://11de784a.github.io/about">Ayush Singh</a> and <a href="https://mjeffs.net/">Maxim Jeffs</a> from which I have inherit some of the source code according to my taste :). </p>    
     </div>
@@ -28,7 +24,7 @@ layout: homepage
 <hr>
 <section id="projects" class="hidden">
     <div class="projects">
-    <h1 class="hidden ">$\psi$ Activity</h1>
+    <h2 class="hidden ">$\psi$ ACTIVITY</h2>
     <!-- <img src="..\assets\images\crab.png" class="center small" alt=""> -->
     <ul>
         <li><a href="..\bundle\">Bundle </a>- A Math-Phys Blog.</li>
@@ -44,7 +40,7 @@ layout: homepage
 <hr>
 <section id="yada" class="hidden">
     <div class="yada">
-    <h1 class="hidden">$\mathcal{L}$ 'The yada yada'</h1>       
+    <h2 class="hidden">$\mathcal{L}$ 'THE YADA YADA...'</h2>       
     <ul>
         <li><a href="..\fields\">Fields </a>- A Life Blog.</li>
         <li><a href="..\artreview\">Art Review</a> - Often times when I consume art, I wish to express what I feel. I am lucky to have couple of people around me who regularly make art. But, most of the times, lack of headspace prevents me to probe and write the art they make. I thus decided to dedicate a page to their art, where I can write about them. It will also contain other art consumption/expression too. </li>
