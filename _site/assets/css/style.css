@@ -1,5 +1,12 @@
+@media (prefers-reduced-motion: no-preference) {
+	* {
+	  scroll-behavior: smooth;
+	}
+  }
+
 body {
-	font-size: 19px;
+	font-size: 21px;
+	font-family: "EB Garamond", serif;
 	background-color: #fff;
 	color: #000;
 	/* max-width: 85rem; */
@@ -33,16 +40,14 @@ header>h1 {
 }
 
 .container {
-	width: 56%;
+	width: 50%;
 	margin: 2px auto;
 	text-align: justify;
 }
 
 section {
-	font-family: 'EB Garamond';
 	display: block;
 	place-items: center;
-	/* min-height: 100vh; */
 	padding: 20px;
 }
 .action {
@@ -58,6 +63,9 @@ nav>ul {
 .nav {
 	display: inline;
 	padding: 8px;
+	font-weight: normal;
+	font-family: "Playwrite NG Modern", cursive;
+	font-size: 14px;
 }
 
 /* 
@@ -171,38 +179,46 @@ footer {
 }
 
 
-@media(prefers-reduced-motion) {
-	.hidden {
-		transition: none;
-	}
-}
-
-/* section.hidden {
-		background-color: #e8e7e6;
-		padding: 50px;
-		margin: 20px;
-		box-shadow: 20px;
-	} */
-
-div.about,
-div.projects,
-div.yada {
-	background-color: rgba(202, 212, 215, 0.2);
-	padding: 10px;
-	box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.2), 0 4px 15px 0 rgba(0, 0, 0, 0.19);
-	/* -webkit-backdrop-filter: blur(5px);
-	backdrop-filter: blur(5px); */
-}
-
-
-div.projects:hover, div.about:hover, div.yada:hover {
-	background-color: rgba(202, 212, 215, 0.3);
-}
-
 footer {
-	font-size: 17px;
+	font-weight: normal;
+	font-family: "Playwrite NG Modern", cursive;
+	font-size: 10px;
+
 }
 
-.about p {
-	padding: 15px;
+.about p,.projects p, .yada p {
+	margin: 10px auto;
+}
+
+
+.projects p, .yada p {
+	width: 70%;
+    /* margin:0; */
+    display:flex;
+    justify-content: space-between;
+}
+
+.tag-title {
+	background: #dee2eb;
+	padding: 1px 5px;
+	text-align: left;
+	border-left: 3px solid #333;
+}
+
+.tag-title:hover {
+	background-color: #bfc0c3;
+}
+.tag-info {
+	font-style: italic;
+	text-align: right;
+	background-color: #f9f9e6;
+	font-size: 0.9em
+}
+
+.indent {
+	margin: -2px 20px;
+}
+
+span>a {
+	color: inherit;
 }

@@ -44,3 +44,23 @@ hr.pad {
     font-weight: bold;
 }
 
+.academic p {
+    margin:0;
+    display:flex;
+    justify-content: space-between;
+}
+
+p {
+    margin: 20px auto;
+}
+
+blockquote {
+    font-weight: 800;
+    font-size: 1.1em;
+    font-style: italic;
+}
+
+div.signature {
+    text-align: right;
+    font-style: italic;
+}

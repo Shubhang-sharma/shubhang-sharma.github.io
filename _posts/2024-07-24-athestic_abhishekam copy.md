@@ -1,11 +1,8 @@
 ---
-title: Friendship
+title: Athestic Abhishekam
 layout: default
-tags: 
+tags: Life
 categories: Draft
 ---
-
-
-
 
 

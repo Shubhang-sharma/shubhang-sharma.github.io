@@ -1,9 +1,9 @@
-<!-- ---
+---
 title: Coloumb Potential ala Quantum Field Theory
 layout: default
 tags: Physics
-categories: Bundle
---- -->
+categories: Draft
+---
 
 
 <!-- <img src="\assets\images\Bundle\fields.png"> -->
