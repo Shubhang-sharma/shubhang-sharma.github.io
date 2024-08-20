@@ -15,6 +15,7 @@ While writing the previous sentence, I felt a little relieved. I am starting to 
 
 I think I am just not able to let go of the repulsive negative thoughts. I am trying to block them - I need to instead let them come and then let them go _gently_. Again, I need to resume meditation. I need more headspace. 
 
+And oh, I think I also need better nutrition. I haven't been eating that great lately. I will see to it :).
 
 
 <div class="signature">
