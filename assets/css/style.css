@@ -14,6 +14,18 @@ body {
 	font-weight: 400;
 }
 
+
+
+.message p {
+	background-color: #f9f9e6;
+}
+
+
+
+.message a {
+	color: red;
+}
+
 h1, h2 {
     font-family: "Playwrite NG Modern", cursive;
 	font-size: 30px;
