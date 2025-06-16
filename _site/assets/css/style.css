@@ -17,7 +17,8 @@ body {
 
 
 .message p {
-	background-color: #f9f9e6;
+	/* background-color: #f9f9e6;*/
+	font-style: italic;
 }
 
 
@@ -52,7 +53,7 @@ header>h1 {
 }
 
 .container {
-	width: 50%;
+	width: 80%;
 	margin: 2px auto;
 	text-align: justify;
 }
@@ -153,6 +154,8 @@ figure figcaption {
 	text-align: center
 }
 
+
+
 img,
 video {
 	margin-left: 1.6rem;
@@ -202,6 +205,17 @@ footer {
 	margin: 10px auto;
 }
 
+div.about {
+      display: flex;
+	  flex-direction: row;
+      align-items: center; /* Vertically center */
+      gap: 10px;           /* Space between image and text */
+    }
+
+/* figure.about-div {
+      max-width: 200px;
+      height: auto;
+    } */
 
 .projects p, .yada p {
 	width: 70%;
@@ -210,6 +224,10 @@ footer {
     justify-content: space-between;
 }
 
+.imgabout {
+	width: 30%;
+	height: auto;
+}
 .tag-title {
 	background: #dee2eb;
 	padding: 1px 5px;

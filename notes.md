@@ -1,12 +1,12 @@
 ---
-title: Bundles - Some writings on Math and Physics 
+title: Notes 
 layout: default
-permalink: bundle/
+permalink: notes/
 ---
 
 <div class="myposts">
 {% for post in site.posts %}
-    {% if post.categories contains 'Bundle' %}
+    {% if post.categories contains 'Notes' %}
         <div class="mypost"><h2><a class="postTitle" href="{{ post.url }}" >{{ post.title}}</a></h2>
         {{ post.excerpt }}
         <div class="right postPost"><i><span class="postTag">{{ post.tags }}</span></i> <br>
