@@ -356,7 +356,7 @@ a {
     display: inline;
     outline: none;
     text-decoration: none;
-    transition: all 150ms ease-in-out
+    transition: all 150ms ease-in-out;
 }
 
 a:link,a:visited,a:focus {

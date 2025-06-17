@@ -4,6 +4,14 @@ layout: default
 permalink: notes/
 ---
 
+
+- [AdS/CFT Correspondence and Geometry](..\assets\docs\2011106_MSc_Thesis.pdf) - Master's  thesis.
+- [Introduction to Manifolds](..\assets\docs\dg_notes.pdf) - Lecture Notes. Under preparation.
+- [Quantum Electrodynamics](..\assets\docs\qed.djvu) - Part of the Lectures notes on a second course in Quantum Field Theory.
+- [Renormalization](..\assets\docs\renormalization.djvu) - Part of the Lectures notes on a second course in Quantum Field Theory
+
+
+
 <div class="myposts">
 {% for post in site.posts %}
     {% if post.categories contains 'Notes' %}
@@ -17,3 +25,5 @@ permalink: notes/
     {% endif %}
 {% endfor %}
 </div>
+
+
