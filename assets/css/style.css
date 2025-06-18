@@ -256,7 +256,7 @@ span>a {
 	display: flex;
 	flex-direction: row-reverse;
 	gap: 20px;
-	flex-grow: 1;
+	/* flex-grow: 1; */
 }
 
 .about-container img {

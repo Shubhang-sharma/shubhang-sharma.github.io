@@ -124,7 +124,6 @@ body {
     padding: 3rem 1.8rem 0;
     text-align: left;
     scroll-behavior: smooth;
-
 }
 
 body>* {
@@ -198,6 +197,8 @@ font-size:smaller;
 .center{
 text-align:center;
 }
+
+
 img,video {
     margin-left: 1.6rem;
     width: 24%

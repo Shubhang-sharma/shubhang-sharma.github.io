@@ -1,29 +1,42 @@
 ---
 title: Notes 
-layout: default
+layout: gallery
 permalink: notes/
 ---
-
-
-- [AdS/CFT Correspondence and Geometry](..\assets\docs\2011106_MSc_Thesis.pdf) - Master's  thesis.
-- [Introduction to Manifolds](..\assets\docs\dg_notes.pdf) - Lecture Notes. Under preparation.
-- [Quantum Electrodynamics](..\assets\docs\qed.djvu) - Part of the Lectures notes on a second course in Quantum Field Theory.
-- [Renormalization](..\assets\docs\renormalization.djvu) - Part of the Lectures notes on a second course in Quantum Field Theory
-
-
-
-<div class="myposts">
-{% for post in site.posts %}
-    {% if post.categories contains 'Notes' %}
-        <div class="mypost"><h2><a class="postTitle" href="{{ post.url }}" >{{ post.title}}</a></h2>
-        {{ post.excerpt }}
-        <div class="right postPost"><i><span class="postTag">{{ post.tags }}</span></i> <br>
-        <span class="postDate">{{ post.date | date: "%b %-d, %Y" }}</span>
+<div class="gallery note-gallery">
+    <div class="gallery-container">
+        <!-- <h2>Some p5.js stuff:</h2> -->
+        <div class="gallery-item">
+            <figure>
+                <a href="{{ '../assets/docs/2011106_MSc_Thesis.pdf' | relative_url }}" target="_blank">
+                  <img src="{{ '../assets/images/gallery/notes/adscft.png' | relative_url }}" alt="Gallery Image 1">
+                </a>
+                <figcaption><b>AdS/CFT Correspondence and Geometry</b> <br> Master's Thesis, 2024-2025 at NISER.</figcaption>
+            </figure>
         </div>
-            <hr class="pad">    
+        <div class="gallery-item">
+            <figure>
+                <a href="{{ '../assets/docs/dg_notes.pdf' | relative_url }}" target="_blank">
+                  <img src="{{ '../assets/images/gallery/notes/manifolds.png' | relative_url }}" alt="Gallery Image 2">
+                </a>
+                <figcaption><b>Introduction to Manifolds</b> <br> Lecture Notes, Even semester 2025, NISER.</figcaption>
+            </figure>
         </div>
-    {% endif %}
-{% endfor %}
+        <div class="gallery-item">
+            <figure>
+                <a href="{{ '../assets/docs/qed.djvu' | relative_url }}" target="_blank">
+                  <img src="{{ '../assets/images/gallery/notes/qed.png' | relative_url }}" alt="Gallery Image 3">
+                </a>
+                <figcaption><b>Quantum Electrodynamics</b> <br> QFT II - Lecture Notes, Even Semester 2024, NISER.</figcaption>
+            </figure>
+        </div>
+        <div class="gallery-item">
+            <figure>
+                <a href="{{ '../assets/docs/renormalization.djvu' | relative_url }}" target="_blank">
+                  <img src="{{ '../assets/images/gallery/notes/renorm.png' | relative_url }}" alt="Gallery Image 4">
+                </a>
+                <figcaption><b>Renormalization</b> QFT II - Lecture Notes, Even Semester 2024, NISER. <br></figcaption>
+            </figure>
+        </div>
+    </div>
 </div>
-
-
