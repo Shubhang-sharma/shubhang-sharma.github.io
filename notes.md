@@ -11,7 +11,7 @@ permalink: notes/
                 <a href="{{ '../assets/docs/2011106_MSc_Thesis.pdf' | relative_url }}" target="_blank">
                   <img src="{{ '../assets/images/gallery/notes/adscft.png' | relative_url }}" alt="Gallery Image 1">
                 </a>
-                <figcaption><b>AdS/CFT Correspondence and Geometry</b> <br> Master's Thesis, 2024-2025 at NISER.</figcaption>
+                <figcaption><b>AdS/CFT Correspondence and Geometry</b> <br> Master's Thesis, 2024-2025, NISER.</figcaption>
             </figure>
         </div>
         <div class="gallery-item">
@@ -35,7 +35,7 @@ permalink: notes/
                 <a href="{{ '../assets/docs/renormalization.djvu' | relative_url }}" target="_blank">
                   <img src="{{ '../assets/images/gallery/notes/renorm.png' | relative_url }}" alt="Gallery Image 4">
                 </a>
-                <figcaption><b>Renormalization</b> QFT II - Lecture Notes, Even Semester 2024, NISER. <br></figcaption>
+                <figcaption><b>Loop corrections and Renormalization Theory</b> <br> QFT II - Lecture Notes, Even Semester 2024, NISER. <br></figcaption>
             </figure>
         </div>
     </div>
