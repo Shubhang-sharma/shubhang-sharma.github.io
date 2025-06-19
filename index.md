@@ -15,8 +15,8 @@ layout: homepage
           Science Education and Research (NISER), Bhubaneswar, India. I did my master's thesis on AdS/CFT correspondence
           and it's connection to geometry of manifolds. I am interested in topics at the interface of Mathematics and
           Physics. Broadly, I am inclined towards Geometry and Topology on the math side and towards Quantum Field
-          Theory and GR on the physics side. Some important directions include symplectic geometry and classical
-          mechanics, gauge theory, and more.</p>
+          Theory and GR on the physics side. Some directions include symplectic geometry and classical
+          mechanics, gauge theory, knot theory (or quantum invariants), mirror symmetry and conformal geometry. I hope to explore some of these in the coming year.</p>
           <!-- See my article on <em>The story of Mathematical Physics</em> in the bundle
           page for a sweeping account of interaction between the two sciences along with multiple viewpoints of
           mathematical physics as a field.  -->
@@ -38,7 +38,7 @@ layout: homepage
         understanding of social structure is on the weaker side, so I initiated a process to get scholarly around it. I
         am reading <em>Sapiens</em> by Yuval Noah Harari and listening to the great lectures by Dr. Vinay Lal on
         <em>Political
-          and Cultural History ofContemporary India</em> these days. The lectures on <em>History of Indian
+          and Cultural History of Contemporary India</em> these days. The lectures on <em>History of Indian
           Civilization</em> are also quiet rigorous! Currently, I am also looking for place to stay for the next year
         where there is some resonance in academic and personal values.
       </p>
@@ -62,7 +62,7 @@ layout: homepage
         scholars both into serious research and social change. A place which revolves around a set of values! </p>
       <p>Current guiding principle: <em>To become a scholar... To humanize teaching (and science) and reward deep
           thought... May be to find a scholarly way to contribute to society...</em></p>
-      <p>Current <a href="">log of projects</a>.</p>
+      <p>Current <a href="https://quiet-visor-b5a.notion.site/Log-Transition-year-2127e925a4ef80c2ac33e309bfe2888c">log of projects</a>.</p>
     </div>
   </section>
 

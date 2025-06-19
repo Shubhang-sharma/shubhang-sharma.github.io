@@ -243,7 +243,7 @@ nav>ul>li>a::before {
     justify-content: center;
 }
 
-.gallery-container  img, {
+.gallery-container  img {
 max-width:400px;
   height: auto;
   border-radius: 4px;
@@ -251,14 +251,14 @@ max-width:400px;
 transition: transform 0.3s ease;
 }
 
-iframe {
+/* iframe {
 max-width:400px;
   height: auto;
   border-radius: 4px;
   object-fit: cover;
 transition: transform 0.3s ease;
 }
-
+ */
 
 .gallery-container figcaption {
     max-width: 400px;

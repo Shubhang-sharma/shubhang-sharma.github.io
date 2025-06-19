@@ -8,7 +8,7 @@ permalink: gallery/
 <div class="gallery">
     <h1>Creative Coding</h1>
     <hr>
-    <p>Creative coding projects in p5.js from first and second years of college. I learned p5.js specifically for
+    <p>Some projects in p5.js from first and second years of college. I learned p5.js specifically for
         physics visualizations. Very rusty with it right now, but shouldn't be hard to get
         back at it! Hopefully I do, especially for the SoME thing! </p>
     <div class="gallery-container">
@@ -16,7 +16,7 @@ permalink: gallery/
         <div class="gallery-item">
             <figure>
                 <img src="{{ '../assets/images/gallery/gallery_1.png' | relative_url }}" alt="Gallery Image 1">
-                <figcaption>Artistic impression of Huygens principle near an apperture.</figcaption>
+                <figcaption>Artistic impression of Huygens principle near an apperture (single point).</figcaption>
             </figure>
         </div>
         <div class="gallery-item">
@@ -54,7 +54,7 @@ permalink: gallery/
                     <img src="{{ '../assets/images/gallery/gallery_6.png' | relative_url }}" alt="Gallery Image 6">
 
                 </a>
-                <figcaption>Another central forces nodes, just a little more art-sy.</figcaption>
+                <figcaption>Another set of (good  looking) nodes under a central force, just a little more art-sy.</figcaption>
             </figure>
         </div>
         <div class="gallery-item">
@@ -96,7 +96,7 @@ permalink: gallery/
         <div class="gallery-item">
             <figure>
                 <img src="{{ '../assets/images/gallery/origami/gallery_2.png' | relative_url }}" alt="Gallery Image 2">
-                <figcaption>Three Quarter View (TQV).
+                <figcaption>~ Three Quarter View (TQV)
                 </figcaption>
             </figure>
         </div>
